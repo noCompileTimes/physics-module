@@ -1,8 +1,10 @@
 #pragma once
 
+#include "btBulletCollisionCommon.h"
+
 #include "core/vec3.hpp"
 
-#include <LinearMath/btIDebugDraw.h>
+#include <vector>
 #include <print>
 
 namespace core
