@@ -29,3 +29,5 @@ namespace core
         std::unique_ptr<PhysicsDebug> _debug;
     };
 }
+
+// TODO - enable at some point if necesary (BT_USE_SSE_IN_API) or (BT_USE_SSE)
