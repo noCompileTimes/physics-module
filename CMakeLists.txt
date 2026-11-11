@@ -1,4 +1,4 @@
-project(physics-module)
+project(physics-module LANGUAGES CXX)
 
 add_library(${PROJECT_NAME})
 

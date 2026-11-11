@@ -1,16 +1,11 @@
 #pragma once
 
-#include "btBulletCollisionCommon.h"
-
 #include "core/vec3.hpp"
-
-#include <vector>
-#include <print>
 
 namespace core
 {
     // TODO move the implementations into a cpp file
-    class PhysicsDebug : public btIDebugDraw
+    class PhysicsDebug final : public btIDebugDraw
     {
     public:
         void drawLine(const btVector3& from, const btVector3& to, const btVector3& color) override
@@ -27,18 +22,9 @@ namespace core
             std::println("draw_contact_point");
         }
 
-        void reportErrorWarning(const char* warningString) override
-        {
-            std::println("draw_error_warning");
-        }
-
         void draw3dText(const btVector3& location, const char* textString) override
         {
             std::println("draw_text3d");
-        }
-
-        void setDebugMode(int debugMode) override // TODO maybe deleted also from bullet interface?
-        {
         }
 
         int getDebugMode() const override
@@ -51,11 +37,9 @@ namespace core
             vertices.clear();
         }
 
-        virtual void flushLines()
-        {
-            std::println("flush_lines");
-        }
-
         std::vector<vec3> vertices;
     };
 }
+
+// TODO - add also the elements for the geometry, to avoid duplicate data
+// TODO - be sure that you check if a vertex is already and use the right index/element when exsists - avoiding duplicates

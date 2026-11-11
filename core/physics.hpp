@@ -2,8 +2,6 @@
 
 #include "physics_debug.hpp"
 
-#include <memory>
-
 namespace core
 {
     class Physics
