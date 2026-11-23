@@ -15,6 +15,8 @@ namespace core
 
             vertices.emplace_back(to.x(), to.y(), to.z());
             vertices.emplace_back(color.x(), color.y(), color.z());
+
+            // TODO maybe handle the elements as well here to better optimize the drawing for a lot of colliders
         }
 
         auto drawContactPoint(const btVector3& PointOnB, const btVector3& normalOnB, btScalar distance, int lifeTime,
